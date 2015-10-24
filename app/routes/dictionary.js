@@ -46,3 +46,20 @@ exports.getWordDesc = function (req, res) {
         }
     });
 };
+
+
+exports.getAllCards = function (req, res) {
+    var Card = req.app.db.models.Card;
+
+    Card.find({}).sort([['created_at', -1]]).exec( function (err, card) {
+        if (err) {
+            console.log('Error in finding card error: ' + err);
+            res.status(204).send('card error');
+        }
+
+        if(card){
+            console.log(card);
+            res.status(200).send(card);
+        }
+    });
+};
