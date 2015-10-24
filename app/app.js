@@ -22,7 +22,7 @@
     app.set('view engine', 'ejs');
 
     app.disable('x-powered-by');
-    app.set('client-url', 'http://'+env+':80');
+    app.set('client-url', 'http://'+env);
     //app.set('client-facebook-signup-path', '/facebook?action=signup');
     //app.set('client-facebook-signin-path', '/facebook?action=signin');
 
