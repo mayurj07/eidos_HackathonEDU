@@ -1,0 +1,48 @@
+{
+  "name": "Edios App",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Node.js webserver for Edios App, HachingEDU, 2015",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "keywords": [
+    "api"
+  ],
+  "license": "MIT License",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "jsdoc": "^3.3.0-beta3",
+    "minami": "^1.1.0",
+    "mocha": "^2.2.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.0",
+    "cluster": "^0.7.7",
+    "connect-mongo": "*",
+    "connect-multiparty": "^1.2.5",
+    "cookie-parser": "^1.3.5",
+    "errorhandler": "^1.4.0",
+    "express": "^4.12.4",
+    "express-session": "^1.11.3",
+    "jsonwebtoken": "^5.0.2",
+    "lodash": "*",
+    "method-override": "^2.3.3",
+    "mime": "^1.3.4",
+    "mongoose": "*",
+    "morgan": "^1.6.0",
+    "node-rsa": "^0.2.26",
+    "node-uuid": "^1.4.3",
+    "nodemailer": "~0.7.1",
+    "passport": "^0.2.2",
+    "passport-facebook": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-oauth": "~0.1.15",
+    "ref": "^1.0.2",
+    "ref-array": "^1.1.1",
+    "ref-struct": "^1.0.1",
+    "request": "^2.58.0",
+    "request-ip": "^1.1.4",
+    "unirest": "^0.4.2"
+  }
+}

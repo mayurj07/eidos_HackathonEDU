@@ -1,0 +1,17 @@
+
+### Node template
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+
+# Coverage directory used by tools like istanbul
+coverage
+
+
+# Dependency directory
+node_modules
+hpgWebServer.iml
+.idea
