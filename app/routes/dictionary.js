@@ -8,7 +8,7 @@ var unirest = require('unirest');
 exports.getWordDesc = function (req, res) {
     var Card = req.app.db.models.Card;
     var keyword = req.query.keyword;
-    var colors = ['red', 'blue', 'green'];
+    var colors = ['#92A6A6', '#436E76', '#ADD9D0', '#558D66', '#B2BE8E', '#B09970', '#205458'];
 
     Card.findOne({"keyword": keyword}, function (err, card) {
         if (err) {
