@@ -58,9 +58,6 @@
         routes      = require('./routes/Controller')(app),
         strategies  = require('./passport/index')(app, passport);
 
-    var apiRouter = require('./routes/secureRoutes');
-    app.use('/secure-api', apiRouter);
-
     // Start it all up
     if (cluster.isMaster) {
         for (var i = 0; i < 4; i++) {

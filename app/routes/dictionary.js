@@ -12,7 +12,7 @@ exports.getWordDesc = function (req, res) {
 
     Card.findOne({"keyword": keyword}, function (err, card) {
         if (err) {
-            console.log('Error in finding card error: ' + err);
+            console.log('Error in finding card: ' + err);
             res.status(204).send('card error');
         }
 
@@ -68,5 +68,19 @@ exports.getAllCards = function (req, res) {
             console.log(card);
             res.status(200).send(card);
         }
+    });
+};
+
+
+exports.deleteCard = function (req, res) {
+    var Card    = req.app.db.models.Card;
+    var keyword = req.params.keyword;
+
+    Card.remove({"keyword": keyword}, function (err, response) {
+        if (err) {
+            console.log('Error in finding card: ' + err);
+            res.status(204).send('card error');
+        }
+            res.status(200).send("Success");
     });
 };
