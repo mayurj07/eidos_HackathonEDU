@@ -23,19 +23,12 @@
 
     app.disable('x-powered-by');
     app.set('client-url', 'http://'+env);
-    //app.set('client-facebook-signup-path', '/facebook?action=signup');
-    //app.set('client-facebook-signin-path', '/facebook?action=signin');
 
     // Password encryption
     app.set('crypto-key', config.cryptoKey);
 
-    // Facebook settings
-    //app.set('facebook-oauth-key', '');
-    //app.set('facebook-oauth-secret', '');
-
     // Setup mongoose
-    //app.set('mongodb_uri', process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/hipergraphs');
-    app.set('mongodb_uri', 'mongodb://localhost/hipergraphs');
+    app.set('mongodb_uri', 'mongodb://localhost/vocabclub');
     app.db = mongoose.connect(app.get('mongodb_uri'));
 
     app.set('port', process.env.PORT || 3500);
@@ -43,7 +36,6 @@
     // Middlewares
     app.use(logger('dev')); // log all requests to the console
     app.use(bodyParser.json());
-    //app.use(express.bodyParser());
     app.use(bodyParser.urlencoded({extended: true})); // use body parser so we can grab information from POST requests
     app.use(cookieParser());
     app.use(methodOverride());
@@ -62,7 +54,7 @@
 
     // Internal includes
     var schemas     = require('./schema/index')(app, mongoose),
-        middlewares = require('./middleware/index')(app),
+    //middlewares = require('./middleware/index')(app),
         routes      = require('./routes/Controller')(app),
         strategies  = require('./passport/index')(app, passport);
 
