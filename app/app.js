@@ -54,7 +54,7 @@
 
     // Internal includes
     var schemas     = require('./schema/index')(app, mongoose),
-    //middlewares = require('./middleware/index')(app),
+        middlewares = require('./middleware/index')(app),
         routes      = require('./routes/Controller')(app),
         strategies  = require('./passport/index')(app, passport);
 
